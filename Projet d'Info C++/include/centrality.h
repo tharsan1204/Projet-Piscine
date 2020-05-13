@@ -5,10 +5,7 @@
 #include "vertex.h"
 
 namespace centrality{
-    double degree(graph& g, unsigned int idx, bool normalize);
-    void degree(graph& g, std::vector<double>& ctr, bool normalize);
-    void eigenvector_centrality(graph& g, std::vector<double>& ctr);
-    void closeness_centrality(graph& g, std::vector<double>& ctr, bool normalize);
+
     void betweenness_centrality_naive(graph& g, std::vector<double>& ctr, bool normalize);
     void betweenness_centrality(graph& g, std::vector<double>& ctr, bool normalize);
     void betweenness_path(graph& g, unsigned int i, unsigned int j, const std::vector<double>& dijkstra,
