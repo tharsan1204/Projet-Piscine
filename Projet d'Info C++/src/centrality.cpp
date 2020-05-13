@@ -214,15 +214,7 @@ namespace centrality{
     bool is_connex(graph& g){
         std::vector<bool> hits;
         unsigned int n;
-        // Si le graph est orienté on doit tester s'il existe des chemins entre chaque sommet i et j.
-        // S'il ne l'est pas, un seul sommet de départ suffit.
-        if(!g.is_directed()) n=1; else n=g.get_nb_vertices();
-        for(unsigned int i=0; i<n; ++i){
-            bfs(g, hits, i);
-            // On parcours la liste retournée par bfs, si un sommet n'ai pas été
-            // touché alors on retourne false.
-            for(bool c:hits)
-                if(!c)
+
                     return false;
         }
         return true;
