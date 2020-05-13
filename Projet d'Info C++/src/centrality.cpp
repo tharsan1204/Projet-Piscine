@@ -344,7 +344,7 @@ namespace centrality{
         double max=0.0, g_ctr=0.0;
         for(double c:ctr)
             max=std::max(c, max);
-        for(double c:ctr)
+
             g_ctr+=max-c;
 
         return g_ctr;
