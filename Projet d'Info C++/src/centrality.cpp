@@ -339,7 +339,7 @@ namespace centrality{
     /**
     *   Retourne la centralite globale du reseau pour des valeurs normalisées.
     */
-    double global_centrality(std::vector<double>& ctr){
+
         //unsigned int n=ctr.size();
         double max=0.0, g_ctr=0.0;
         for(double c:ctr)
