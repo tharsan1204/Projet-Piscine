@@ -273,7 +273,11 @@ namespace centrality{
             for(unsigned int i=0; i<neighbours.size(); ++i){
                 y=neighbours[i];
                 if(!s[y]){
-
+                    weight=g.get_weight({x, y});
+                    if(weight<0)
+                        d[y]=LONG_MAX;
+                    else
+                        d[y]=std::min(d[y], d[x]+weight);
                 }
             }
             k++;
