@@ -4,6 +4,7 @@
 #include <string>
 
 namespace color{
-    s
+    std::string makeRGB(int r, int g, int b);
+    std::string get_hue_rgb(double percent);
 }
 #endif // COLOR_H_INCLUDED
