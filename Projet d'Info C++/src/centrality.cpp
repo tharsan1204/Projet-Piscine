@@ -235,7 +235,13 @@ namespace centrality{
     */
     void bfs(graph& g, std::vector<bool>& hits, unsigned int idx){
         hits=std::vector<bool>(g.get_nb_vertices(), 0);
+      std::queue<unsigned int> q;
+        // on ajoute de sommet 'idx' à la liste des sommets à explorer
+        q.push(idx);
+        // on note le sommet 'idx' comme explore
+        hits[idx]=1;
 
+        // Tant qu'il n'y a pas de sommet a explorer
         while(!q.empty()){
             std::vector<unsigned int> n=g.get_neighbours(q.front());
             q.pop();
